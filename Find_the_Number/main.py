@@ -12,22 +12,24 @@ if __name__ == "__main__":
 numero_secreto = random.randrange(1,101)
 pontos = 1000
 print("--------------> SELECIONE A DIFICULDADE: <----------------\n")
-print("1- EASY         |20 Tentativas|")
+print(f"1- EASY         |20 Tentativas|          Seus pontos: {pontos}")
 print("2- MEDIUM       |10 Tentativas|")
 print("3- HARD         |5  Tentativas|")
 print(" ")
 dif=int(input("Digite uma dificuldade: "))
-print(" ")
 tentativas = 0
 match dif:#switch case do python
     case 1:
+        print("-> Modo |EASY| Selecionado <-")
         tentativas = 20
     case 2:
+        print("-> Modo |MEDIUM| Selecionado <-")
         tentativas = 10
     case 3:
+        print("-> Modo |HARD| Selecionado <-")
         tentativas = 5   
-
-chute=int(input("-> Digite o chute: "))
+print(" ")
+chute=int(input("-> Digite o chute (1 a 100): "))
 while tentativas>0:
     
     print("Loading...")
@@ -43,7 +45,7 @@ while tentativas>0:
     tentativas -= 1
     print(f" -> Total de pontos: {pontos}")
     print(f"\nRestam {tentativas} Tentativas")
-    chute=int(input("-> Digite o chute novamente: "))
+    chute=int(input("-> Digite o chute novamente (1 a 100): "))
 
 if tentativas==0:
    print("\nOPS... As tentativas acabaram, Você Perdeu! =( ")
